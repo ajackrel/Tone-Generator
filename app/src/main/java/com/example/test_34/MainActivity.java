@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = (Button)findViewById(R.id.button);
+        MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.meow);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.test_tone);
                 music.start();
             }
         });
